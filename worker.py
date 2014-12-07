@@ -126,6 +126,10 @@ def run():
             if last_reading.notified:
                 print("Run session running too long, but User was already notified")
                 return
+            else:
+                last_reading.notified = True
+        else:
+            reading.notified = True
 
         unit = "Heater" if mode.lower() == "heat" else "AC"
         if MINUTES > 60:
@@ -146,7 +150,6 @@ def run():
 
         print(sms.sid)
 
-        last_reading.notified = True
         session.commit()
     else:
         print("Not notifying because it has not been long enough: "+str(duration))
