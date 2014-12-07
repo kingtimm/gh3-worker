@@ -1,0 +1,5 @@
+BASE_URL = "http://127.0.0.1:8080"
+MINUTES = 720
+
+ACCOUNT_SID = "Twilio"
+ACCOUNT_TOKEN = "Twilio"
